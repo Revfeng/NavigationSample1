@@ -8,6 +8,8 @@
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="CenterAndExpand" />
             <Button Text="Next" Clicked="Button_Clicked"/>
+            <ListView ItemsSource="{Binding DisplayNames}">
+            </ListView>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using NavigateTest.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
@@ -13,9 +14,13 @@ namespace NavigateTest
 	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class Page2 : ContentPage
 	{
+        private readonly Page2ViewModel page2ViewModel;
+
 		public Page2 ()
 		{
+            page2ViewModel = new Page2ViewModel();
 			InitializeComponent ();
+            BindingContext = page2ViewModel;
 		}
 
         private async void Button_Clicked(object sender, EventArgs e)
